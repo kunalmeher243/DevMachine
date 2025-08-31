@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kunal's Portfolio</title>
-    
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IPhz2W1x/JkX+fM06gHj56FvL2T5eHl4N/h4JgB+f6OQ5k5t6lD7s6M+m+m+J5g=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="navbar">
       <a href="#home" class="logo">DevMachine Synaptrix — Built to Create</a>
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -66,13 +70,6 @@
           <p>AI, LLMs, Chatgpt, MS Copilot, Claude AI</p>
         </div>
         <div class="skill-card">
-          <i class="fa-solid fa-paintbrush"></i>
-          <h3>Version Control</h3>
-          <p>Git/GitHub, VSCode, AWS Cloud, MS Office</p>
-        </div>
-      </div>
-    </section>
-
     <section id="projects" class="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
@@ -130,7 +127,7 @@
       <img id="popup-img" src="">
     </div>
     <footer>
-      <p>&copy; 2025 Kunal Meher. All rights reserved.</p>
+      <p>&copy; 2025 DevMachine synaptrix. All rights reserved.</p>
       <div class="social-links">
         <a href="https://github.com/Kunalmeher243" target="_blank">
           <i class="fa-brands fa-github"></i>
@@ -147,7 +144,7 @@
       </div>
     </footer>
     <script>
-      // Smooth scroll
+    
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -161,7 +158,6 @@
         });
       });
     
-      // Navbar background change on scroll
       window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         navbar.style.backgroundColor = window.scrollY > 50
@@ -169,7 +165,13 @@
           : 'rgba(10, 10, 10, 0.95)';
       });
 
-      // Certificate popup
+      function openCertificate(imgSrc) {
+        let popup = document.getElementById("popup");
+        let popupImg = document.getElementById("popup-img");
+        popupImg.src = imgSrc;
+        popup.style.display = "flex";
+      }
+
       function openPopup(imgSrc) {
         document.getElementById("popup-img").src = imgSrc;
         document.getElementById("popup").style.display = "flex";
@@ -177,12 +179,6 @@
 
       function closePopup() {
         document.getElementById("popup").style.display = "none";
-      }
-
-      // Mobile menu toggle
-      function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
       }
 
     </script>
