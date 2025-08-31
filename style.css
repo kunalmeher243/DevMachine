@@ -77,7 +77,8 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    /* Use a fluid font size for better responsiveness */
+    font-size: clamp(2rem, 8vw, 4rem);
     margin-bottom: 1.5rem;
 }
 
@@ -85,25 +86,24 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 12% 5%;
     background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
 }
 
 .hero-content {
     flex: 1;
-    padding-right: relative;
+    padding-right: 2rem;
 }
 
-.hero-image img {
+.hero-image {
     flex: 1;
     text-align: center;
-    position: relative;
 }
 
 .Profile-img {
-    float: left;
-    margin-right: 10px;
+    float: none; /* Remove float for mobile layout */
+    margin: 0;
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -191,7 +191,7 @@ body {
 }
 
 .skill-card i {
-    font-size: 2.5rem; /* Set the size of the icon to match the projects */
+    font-size: 2.5rem;
     color: var(--accent);
     margin-bottom: 1rem;
 }
@@ -458,6 +458,37 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--dark-bg);
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .hamburger {
+        display: block; 
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -468,10 +499,14 @@ footer {
         padding-right: 0;
         margin-bottom: 3rem;
     }
-
+    
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    
     .Profile-img {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
 
     .about {
@@ -489,24 +524,26 @@ footer {
         width: 280px;
         height: 280px;
     }
-
-    .nav-links {
-        display: none;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        padding-left: 2rem;
-    }
-
+    
     .skills-grid,
+    .projects-grid,
+    .cert-container,
     .contact-form {
         grid-template-columns: 1fr;
     }
 
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+    
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form textarea {
         width: 100%;
     }
+}
+
+.hamburger {
+    display: none;
 }
