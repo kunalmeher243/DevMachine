@@ -77,8 +77,7 @@ body {
 }
 
 .hero h1 {
-    /* Use a fluid font size for better responsiveness */
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: 4rem;
     margin-bottom: 1.5rem;
 }
 
@@ -86,24 +85,25 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 12% 5%;
     background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 2rem;
+    padding-right: relative;
 }
 
-.hero-image {
+.hero-image img {
     flex: 1;
     text-align: center;
+    position: relative;
 }
 
 .Profile-img {
-    float: none; /* Remove float for mobile layout */
-    margin: 0;
+    float: left;
+    margin-right: 10px;
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -191,7 +191,7 @@ body {
 }
 
 .skill-card i {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Set the size of the icon to match the projects */
     color: var(--accent);
     margin-bottom: 1rem;
 }
@@ -457,38 +457,26 @@ footer {
     transform: translate(-3px);
 }
 
+/* Hamburger Menu Icon Styles */
+.hamburger {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1rem 5%;
-    }
-
-    .nav-links {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: var(--dark-bg);
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
-        padding: 1rem 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-        margin: 0.5rem 0;
-    }
-
-    .hamburger {
-        display: block; 
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
     .hero {
         flex-direction: column;
         text-align: center;
@@ -499,14 +487,10 @@ footer {
         padding-right: 0;
         margin-bottom: 3rem;
     }
-    
-    .hero h1 {
-        font-size: clamp(2.5rem, 10vw, 4rem);
-    }
-    
+
     .Profile-img {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
     }
 
     .about {
@@ -524,26 +508,24 @@ footer {
         width: 280px;
         height: 280px;
     }
-    
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        padding-left: 2rem;
+    }
+
     .skills-grid,
-    .projects-grid,
-    .cert-container,
     .contact-form {
         grid-template-columns: 1fr;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-    }
-    
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form textarea {
         width: 100%;
     }
-}
-
-.hamburger {
-    display: none;
 }
