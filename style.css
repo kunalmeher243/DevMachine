@@ -457,25 +457,6 @@ footer {
     transform: translate(-3px);
 }
 
-/* Hamburger Menu Icon Styles */
-.hamburger {
-  width: 30px;
-  height: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 1000;
-}
-.hamburger span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #333;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
