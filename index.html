@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunal's Portfolio</title>
-
+    <title>DevMachine-Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
+
   <body>
     <nav class="navbar">
       <a href="#home" class="logo">DevMachine Synaptrix — Built to Create</a>
+
+      <div class="hamburger" onclick="toggleMenu()"> 
+        <i class="fa fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -37,7 +42,7 @@
                 <span class="letter">e</span>
                 <span class="letter">r</span>
             </h1>
-            <h1>Gen AI Engineer</h1>
+            <h1>AI Developer</h1>
             <p>
                 I'm Kunal, an engineering student passionate about programming, Debugging, and have Strong DSA with Problem Solving Skills.
                 I love merging creativity with technology whether it's Building digital experiences that merge creatively with technology and exploring new Skills .
@@ -53,19 +58,19 @@
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <i class="fa-solid fa-code"></i>
+          <i class="fa-solid fa-code"></i> 
           <h3>Programming Languages</h3>
-          <p>C/C++, Java, Python, Front-End Development</p>
+          <p>C/C++, Java, Python, Front-End Development(HTML5, CSS3, JavaScript), Databases(MySQL, PostgreSQL, MongoDB)</p>
         </div>
         <div class="skill-card">
           <i class="fa-solid fa-brain"></i>
-          <h3>Gen-AI and AI Tools Expert</h3>
-          <p>AI, LLMs, Chatgpt, MS Copilot, Claude AI</p>
+          <h3>AI & Tools</h3>
+          <p>NLP, Chatgpt, Gemini AI, Copilot, Claude AI</p>
         </div>
         <div class="skill-card">
           <i class="fa-solid fa-paintbrush"></i>
           <h3>Version Control</h3>
-          <p>Git/GitHub, VSCode, AWS Cloud, MS Office</p>
+          <p>Git/GitHub, Vercel, VSCode, AWS Cloud, MS Office</p>
         </div>
       </div>
     </section>
@@ -75,8 +80,8 @@
       <div class="projects-grid">
         <div class="project-card">
           <i class="fa-solid fa-microchip"></i>
-          <h3>Atlas Voice Assistant</h3>
-          <p>Simple Python-based assistant with speech recognition, weather API, and web search integration.</p>
+          <h3>Atlas-A Voice Assistant</h3>
+          <p>Simple Python-based assistant with speech recognition, weather API, and web search integration and more.</p>
         </div>
         <div class="project-card">
           <i class="fa-solid fa-newspaper"></i>
@@ -126,6 +131,7 @@
     <div id="popup" class="popup" onclick="closePopup()">
       <img id="popup-img" src="">
     </div>
+
     <footer>
       <p>&copy; 2025 DevMachine synaptrix. All rights reserved.</p>
       <div class="social-links">
@@ -143,8 +149,8 @@
         </a>
       </div>
     </footer>
+
     <script>
-    
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -165,6 +171,10 @@
           : 'rgba(10, 10, 10, 0.95)';
       });
 
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+      
       function openCertificate(imgSrc) {
         let popup = document.getElementById("popup");
         let popupImg = document.getElementById("popup-img");
@@ -180,7 +190,8 @@
       function closePopup() {
         document.getElementById("popup").style.display = "none";
       }
-
     </script>
   </body>
 </html>
+  
+  
