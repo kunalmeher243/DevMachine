@@ -47,6 +47,29 @@ body {
     position: relative;
 }
 
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(13, 18, 31, 0.95);
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.nav-links.active li {
+    margin: 1rem 0;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -174,7 +197,7 @@ body {
 }
 
 .skill-card i {
-    font-size: 2.5rem; /* Set the size of the icon to match the projects */
+    font-size: 2.5rem;
     color: var(--accent);
     margin-bottom: 1rem;
 }
