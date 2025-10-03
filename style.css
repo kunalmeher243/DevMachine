@@ -6,13 +6,13 @@
 }
 
 :root {
-    --dark-bg: #0d121f;
-    --darker-bg: #090e18;
-    --accent: #00bcd4;
-    --accent-glow: rgba(0, 188, 212, 0.4);
-    --accent-color: #3f51b5;
-    --accent-hover: #303f9f;
-    --text: #ffffff;
+    --dark-bg: #12121c;
+    --darker-bg:  #0d0d14;
+    --accent:  #9d4edd;
+    --accent-glow: rgba(157, 78, 221, 0.4);
+    --accent-color: #D4AF37;
+    --accent-hover: #BC9C2E;
+    --text: #E5E5E5;
 }
 
 body {
@@ -375,11 +375,11 @@ body {
     padding: 8px 16px;
     font-size: 0.9rem;
     border-radius: 6px;
-    background: var(--accent);
+    background: var(--accent-color);
     color: #fff;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 10px var(--accent);
+    box-shadow: 0 0 10px var(--accent-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto;
 }
@@ -467,6 +467,7 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        transform-origin: right 0.5s;
     }
     .hero {
         flex-direction: column;
