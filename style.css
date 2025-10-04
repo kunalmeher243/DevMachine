@@ -435,6 +435,10 @@ body {
 .animated-name .letter:nth-child(9) { animation-delay: 1.7s; }
 .animated-name .letter:nth-child(10) { animation-delay: 1.9s; }
 .animated-name .letter:nth-child(11) { animation-delay: 2.1s; }
+.animated-name .letter:nth-child(12) { animation-delay: 2.3s; }
+.animated-name .letter:nth-child(13) { animation-delay: 2.5s; }
+.animated-name .letter:nth-child(14) { animation-delay: 2.7s; }
+.animated-name .letter:nth-child(15) { animation-delay: 2.9s; }
 
 
 footer {
