@@ -30,23 +30,28 @@
     <section id="home" class="hero">
       <div class="hero-content">
             <h1 class="animated-name">
+                <span class="letter">F</span>
+                <span class="letter">u</span>
+                <span class="letter">l</span>
+                <span class="letter">l</span>
+                <span class="letter">-</span>
+                <span class="letter">s</span>
+                <span class="letter">t</span>
+                <span class="letter">a</span>
+                <span class="letter">c</span>
+                <span class="letter">k</span>
+                <span class="letter"> </span>
                 <span class="letter">D</span>
                 <span class="letter">e</span>
                 <span class="letter">v</span>
-                <span class="letter">O</span>
-                <span class="letter">p</span>
-                <span class="letter">s</span>
-                <span class="letter"> </span>
-                <span class="letter">E</span>
-                <span class="letter">n</span>
-                <span class="letter">g</span>
-                <span class="letter">i</span>
-                <span class="letter">n</span>
                 <span class="letter">e</span>
+                <span class="letter">l</span>
+                <span class="letter">o</span>
+                <span class="letter">p</span>
                 <span class="letter">e</span>
                 <span class="letter">r</span>
             </h1>
-            <h1>Kunal Meher</h1>
+            <h1>Mr. Kunal Meher</h1>
             <p>
                 I'm Kunal, an engineering student passionate about programming, Debugging, and have Strong DSA with Problem Solving Skills.
                 I love merging creativity with technology whether it's Building digital experiences that merge creatively with technology and exploring new Skills .
@@ -54,7 +59,7 @@
             <a href="#contact" class="cta-button">Let's Connect</a>
         </div>
         <div class="hero-image">
-            <img src="profile14.jpg" alt="Profile" class="Profile-img">
+            <img src="profile18.jpg" alt="Profile" class="Profile-img">
         </div>
     </section>
 
@@ -89,8 +94,8 @@
         </div>
         <div class="project-card">
           <i class="fa-solid fa-newspaper"></i>
-          <h3>Fake news Anomaly Detection.</h3>
-          <p>An AI and NLP-powered model designed to analyze news content, detect anomalies, and classify potential misinformation with higher accuracy.</p>
+          <h3>AI Powered Resume Builder For Blue-Collar Professionals</h3>
+          <p>An OpenAI APIs and Backend-powered model designed to assist blue-collar professionals in creating effective resumes by analyzing job descriptions and suggesting relevant skills and experiences with voice inputs.</p>
         </div>
         <div class="project-card">
           <i class="fa-solid fa-calendar-days"></i>
@@ -154,47 +159,7 @@
       </div>
     </footer>
 
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-    
-      window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        navbar.style.backgroundColor = window.scrollY > 50
-          ? 'rgba(10, 10, 10, 0.98)'
-          : 'rgba(10, 10, 10, 0.95)';
-      });
-
-      function toggleMenu() {
-        document.querySelector(".nav-links").classList.toggle("active");
-      }
-      
-      function openCertificate(imgSrc) {
-        let popup = document.getElementById("popup");
-        let popupImg = document.getElementById("popup-img");
-        popupImg.src = imgSrc;
-        popup.style.display = "flex";
-      }
-
-      function openPopup(imgSrc) {
-        document.getElementById("popup-img").src = imgSrc;
-        document.getElementById("popup").style.display = "flex";
-      }
-
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
   
