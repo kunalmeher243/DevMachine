@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevMachine-Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
@@ -11,10 +12,22 @@
   </head>
 
   <body>
+    <div id="preloader">
+      <div class="loader-center">
+        <div class="loader-line"></div>
+        <div class="loader-text">0%</div>
+      </div>
+
+      <div class="loader-top"></div>
+      <div class="loader-bottom"></div>
+    </div>
+
+    <audio id="loaderSound" src="loader.mp3" preload="auto"></audio>
+
     <nav class="navbar">
       <a href="#home" class="logo">DevMachine Synaptrix — Built to Create</a>
 
-      <div class="hamburger" onclick="toggleMenu()"> 
+      <div class="hamburger"> 
         <i class="fa fa-bars"></i>
       </div>
 
@@ -22,6 +35,8 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#certificates">Certificate</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul> 
@@ -59,55 +74,187 @@
           Debugging, and have Strong DSA with Problem Solving Skills.
         </p>
 
-        <a href="#contact" class="cta-button">Let's Connect</a>
+        <div class="hero-buttons">
+          <a href="#contact" class="cta-button">Let's Connect</a>
+          <a href="Kunal-CV.pdf" download class="resume-btn">Download Resume</a>
+        </div>
       </div>
 
       <div class="hero-image">
-        <img src="profile18.jpg" alt="Profile" class="Profile-img">
+        <img src="profile1.jpg" alt="Profile" class="Profile-img">
       </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fa-solid fa-code"></i> 
-          <h3>Programming Languages</h3>
-          <p>C/C++, Java, Python, Front-End Development(HTML5, CSS3, JavaScript), Databases(MySQL, PostgreSQL, MongoDB)</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-brain"></i>
-          <h3>AI & Tools</h3>
-          <p>NLP, Chatgpt, Gemini AI, Copilot, Claude AI</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-paintbrush"></i>
-          <h3>Version Control</h3>
-          <p>Git/GitHub, Vercel, VSCode, AWS Cloud, MS Office</p>
-        </div>
-      </div>
-    </section>
+  <section id="skills" class="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="devicon-mongodb-plain"></i>
+      <span>MongoDB</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-express-original"></i>
+      <span>Express</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-react-original"></i>
+      <span>React</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-nodejs-plain"></i>
+      <span>Node.js</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-html5-plain"></i>
+      <span>HTML</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-css3-plain"></i>
+      <span>CSS</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-javascript-plain"></i>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-cplusplus-plain"></i>
+      <span>C++</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-python-plain"></i>
+      <span>Python</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-java-plain"></i>
+      <span>Java</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-mysql-plain"></i>
+      <span>MySQL</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-git-plain"></i>
+      <span>Git</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-github-original"></i>
+      <span>GitHub</span>
+    </div>
+
+  </div>
+</section>
+
 
     <section id="projects" class="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <i class="fa-solid fa-microchip"></i>
-          <h3>Atlas-A Voice Assistant</h3>
-          <p>Simple Python-based assistant with speech recognition, weather API, and web search integration and more.</p>
-        </div>
-        <div class="project-card">
-          <i class="fa-solid fa-newspaper"></i>
-          <h3>AI Powered Resume Builder For Blue-Collar Professionals</h3>
-          <p>An OpenAI APIs and Backend-powered model designed to assist blue-collar professionals in creating effective resumes by analyzing job descriptions and suggesting relevant skills and experiences with voice inputs.</p>
+          <i class="fa-solid fa-chart-area"></i>
+          <h3>Air Quality Monitering Web App</h3>
+          <p>A full-stack web application for air quality monitoring with real-time sensor data, interactive dashboard, cloud database, alert system, and health-friendly environment insights.</p>
         </div>
         <div class="project-card">
           <i class="fa-solid fa-calendar-days"></i>
           <h3>Event Aggregator for College Students</h3>
           <p>A web platform for college students to discover events and conveniently book nearby accommodations. It simplifies event participation while enhancing accessibility and overall student experience.</p>
         </div>
+        <div class="project-card">
+          <i class="fa-regular fa-file-image"></i>
+          <h3>AI Powered Resume Builder For Blue-Collar Professionals</h3>
+          <p>An OpenAI APIs and Backend-powered model designed to assist blue-collar professionals in creating effective resumes by analyzing job descriptions and suggesting relevant skills and experiences with voice inputs.</p>
+        </div>
       </div>
     </section>
+
+<!-- Experience Section -->
+<section class="timeline-section" id="experience">
+
+  <h2 class="section-title">Professional Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-date">Nov 2025 – Feb 2026</span>
+      <div class="timeline-content">
+        <h3>Full Stack Developer Intern</h3>
+        <h4>Cognifyz Technologies</h4>
+        <ul>
+          <li>Optimized applications for 300+ users.</li>
+          <li>Built 5+ RESTful APIs.</li>
+          <li>Improved performance by 20%.</li>
+          <li>Worked in 5-member Agile team.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">Oct 2025 – Nov 2025</span>
+      <div class="timeline-content">
+        <h3>Participant</h3>
+        <h4>BPUT Hackathon</h4>
+        <ul>
+          <li>Built AI resume builder using React + Vite.</li>
+          <li>Generated resumes under 5 minutes.</li>
+          <li>Worked on APIs and authentication.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Education Section -->
+<section class="timeline-section" id="education">
+
+  <h2 class="section-title">Education</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-date">2024 – 2028</span>
+      <div class="timeline-content">
+        <h3>B.Tech (CSE)</h3>
+        <h4>Trident Academy of Technology</h4>
+        <p>Bhubaneswar, Odisha</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">2022 – 2024</span>
+      <div class="timeline-content">
+        <h3>12th BSE</h3>
+        <h4>Krishna’s Vikash HSS</h4>
+        <p>Bargarh, Odisha</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">2021 – 2022</span>
+      <div class="timeline-content">
+        <h3>10th CHSE</h3>
+        <h4>Ganapati Adarsha Shikshya Niketan</h4>
+        <p>Birmaharajpur, Odisha</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
     <section id="certificates">
       <h2>Certificates</h2>
@@ -117,8 +264,8 @@
           <h3>AI Powered Shopping Ads Certified by Google</h3>
         </div>
         <div class="cert-card">
-          <img src="cert2.jpeg" alt="Certificate 2" onclick="openPopup(this.src)">
-          <h3>AI Foundation Bedge by Oracle</h3>
+          <img src="cert4.jpg" alt="Certificate 2" onclick="openPopup(this.src)">
+          <h3>Developing Back-end Apps With Node.js and Express.js by IBM</h3>
         </div>
         <div class="cert-card">
           <img src="cert3.jpeg" alt="Certificate 3" onclick="openPopup(this.src)">
@@ -136,8 +283,20 @@
         <button type="submit">Send</button>
       </form>
       <div class="contact-right">
-          <p><i class="fa-solid fa-phone"></i> +91 8144156024</p>
+          <p><i class="fa-solid fa-phone"></i> +91 8249410332</p>
           <p><i class="fa-solid fa-envelope"></i> kunalmeher243@gmail.com</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/kunalmeher27" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Kunalmeher243" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://instagram.com/_chillkunal" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
     </section>
 
@@ -147,20 +306,6 @@
 
     <footer>
       <p>&copy; 2025 DevMachine synaptrix. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/Kunalmeher243" target="_blank">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://instagram.com/_chillkunal" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://facebook.com/Kunal Meher" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kunal-meher-94313833b" target="_blank">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
     </footer>
 
     <script src="script.js"></script>
