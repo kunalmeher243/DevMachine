@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const texts = [
-        "Coder.",
         "MERN Stack Developer.",
+        "Coder.",
         "Node.js Developer."
     ]
 
