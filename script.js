@@ -1,101 +1,183 @@
-document.addEventListener("DOMContentLoaded", function () {
 
-    const menu = document.querySelector(".nav-links")
-    const hamburger = document.querySelector(".hamburger")
-    const navbar = document.querySelector(".navbar")
-    const typingElement = document.getElementById("typing-text")
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menu = document.querySelector(".nav-links");
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    if (hamburger && menu) {
+
+        hamburger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (
+                menu.classList.contains("active") &&
+                !menu.contains(e.target) &&
+                !hamburger.contains(e.target)
+            ) {
+                menu.classList.remove("active");
+            }
+        });
+    }
+
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault()
 
-            const target = document.querySelector(this.getAttribute('href'))
+        anchor.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
 
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                })
+                    behavior: "smooth",
+                    block: "start"
+                });
             }
 
-            menu.classList.remove("active")
-        })
-    })
+            menu?.classList.remove("active");
+        });
 
-    window.addEventListener('scroll', () => {
-        navbar.style.backgroundColor = window.scrollY > 50
-            ? 'rgba(10,10,10,0.98)'
-            : 'rgba(10,10,10,0.95)'
-    })
+    });
 
-    function toggleMenu() {
-        menu.classList.toggle("active")
+    if (navbar) {
+
+        window.addEventListener("scroll", () => {
+
+            navbar.style.backgroundColor =
+                window.scrollY > 50
+                    ? "rgba(10,10,10,0.98)"
+                    : "rgba(10,10,10,0.95)";
+
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+
+        });
     }
 
-    hamburger.addEventListener("click", toggleMenu)
+    const timelineItems = document.querySelectorAll(".timeline-item");
 
-    document.addEventListener("click", function (e) {
-        if (
-            menu.classList.contains("active") &&
-            !menu.contains(e.target) &&
-            !hamburger.contains(e.target)
-        ) {
-            menu.classList.remove("active")
-        }
-    })
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    timelineItems.forEach(item => observer.observe(item));
 
     window.openPopup = function (imgSrc) {
-        document.getElementById("popup-img").src = imgSrc
-        document.getElementById("popup").style.display = "flex"
-    }
+        const popup = document.getElementById("popup");
+        const popupImg = document.getElementById("popup-img");
+        if (popup && popupImg) {
+            popupImg.src = imgSrc;
+            popup.style.display = "flex";
+        }
+    };
 
     window.closePopup = function () {
-        document.getElementById("popup").style.display = "none"
-    }
+        const popup = document.getElementById("popup");
+        if (popup) popup.style.display = "none";
+    };
 
-    const texts = [
-        "MERN Stack Developer.",
-        "Coder.",
-        "Node.js Developer."
-    ]
+    const typingElement = document.getElementById("typing-text");
 
-    let count = 0
-    let index = 0
-    let currentText = ""
-    let letter = ""
+    if (typingElement) {
 
-    function typeEffect() {
+        const texts = [
+            "MERN Stack Developer.",
+            "Coder.",
+            "Node.js Developer."
+        ];
 
-        if (count === texts.length) {
-            count = 0
+        let count = 0;
+        let index = 0;
+
+        function typeEffect() {
+            const current = texts[count];
+            typingElement.textContent = current.slice(0, ++index);
+
+            if (index < current.length) {
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(deleteEffect, 1500);
+            }
         }
 
-        currentText = texts[count]
-        letter = currentText.slice(0, ++index)
+        function deleteEffect() {
+            const current = texts[count];
+            typingElement.textContent = current.slice(0, --index);
 
-        typingElement.textContent = letter
-
-        if (letter.length < currentText.length) {
-            setTimeout(typeEffect, 100)
-        } else {
-            setTimeout(deleteEffect, 1500)
+            if (index > 0) {
+                setTimeout(deleteEffect, 60);
+            } else {
+                count = (count + 1) % texts.length;
+                setTimeout(typeEffect, 500);
+            }
         }
+
+        typeEffect();
     }
 
-    function deleteEffect() {
+});
 
-        letter = currentText.slice(0, --index)
-        typingElement.textContent = letter
+window.addEventListener("load", () => {
 
-        if (letter.length > 0) {
-            setTimeout(deleteEffect, 60)
-        } else {
-            count++
-            index = 0
-            setTimeout(typeEffect, 500)
-        }
+    const preloader = document.getElementById("preloader");
+    const text = document.querySelector(".loader-text");
+    const sound = document.getElementById("loaderSound");
+
+    if (!preloader || !text) return;
+
+    if (sound) {
+        sound.volume = 0.4;
+        sound.play().catch(() => {});
     }
 
-    typeEffect()
+    let count = 0;
 
-})
+    const interval = setInterval(() => {
+
+        count++;
+        text.textContent = count + "%";
+
+        if (count >= 100) {
+
+            clearInterval(interval);
+
+            document.body.classList.add("loaded");
+
+            if (sound) {
+                sound.pause();
+                sound.currentTime = 0;
+            }
+
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 2200);
+        }
+
+    }, 15);
+
+});
