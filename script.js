@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typingElement) {
 
         const texts = [
-            "MERN Stack Developer.",
             "Coder.",
+            "MERN Stack Developer.",
             "Node.js Developer."
         ];
 
