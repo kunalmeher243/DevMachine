@@ -6,6 +6,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-links a");
+    const openResumeViewerBtn = document.getElementById("open-resume-viewer");
+    const resumeViewer = document.getElementById("resume-viewer");
+    const closeResumeViewerBtn = document.getElementById("close-resume-viewer");
+
+    const closeResumeViewer = () => {
+        if (!resumeViewer) return;
+        resumeViewer.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    };
+
+    if (openResumeViewerBtn && resumeViewer) {
+        openResumeViewerBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            resumeViewer.classList.add("active");
+            document.body.classList.add("no-scroll");
+        });
+    }
+
+    if (closeResumeViewerBtn) {
+        closeResumeViewerBtn.addEventListener("click", closeResumeViewer);
+    }
+
+    if (resumeViewer) {
+        resumeViewer.addEventListener("click", (e) => {
+            if (e.target === resumeViewer) {
+                closeResumeViewer();
+            }
+        });
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && resumeViewer?.classList.contains("active")) {
+            closeResumeViewer();
+        }
+    });
 
     if (hamburger && menu) {
 
@@ -108,7 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const texts = [
             "Coder.",
             "MERN Stack Developer.",
-            "Node.js Developer."
+            "Node.js Developer.",
+            "Tech Enthusiast."
         ];
 
         let count = 0;
