@@ -61,18 +61,18 @@
         </div>
 
         <p>
-          I'm Kunal, an engineering student passionate about programming,
-          Debugging, and have Strong DSA with Problem Solving Skills.
+          Computer Science student with strong skills in DSA, Full-Stack Development, 
+          and debugging, passionate about building smart and scalable AI applications.
         </p>
 
         <div class="hero-buttons">
           <a href="#contact" class="cta-button">Let's Connect</a>
-          <a href="Kunal-CV.pdf" download class="resume-btn">Download Resume</a>
+          <a href="#" class="resume-btn" id="open-resume-viewer">Download Resume</a>
         </div>
       </div>
-
+      
       <div class="hero-image">
-        <img src="profile1.jpg" alt="Profile" class="Profile-img">
+        <img src="profile2.png" alt="Profile" class="Profile-img">
       </div>
     </section>
 
@@ -146,6 +146,15 @@
       <span>GitHub</span>
     </div>
 
+    <div class="skill-card">
+      <i class="devicon-django-plain"></i>
+      <span>Django</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-flask-original"></i>
+      <span>Flask</span>
+    </div>
   </div>
 </section>
 
@@ -169,12 +178,12 @@
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
-          <li>React.js</li>
+          <li>Node.js</li>
         </ul>
       </article>
 
       <article class="skills-summary-card">
-        <h3>Databases & Tools</h3>
+        <h3>Databases & Version Control</h3>
         <ul>
           <li>SQL</li>
           <li>MySQL</li>
@@ -187,7 +196,7 @@
       <article class="skills-summary-card">
         <h3>Frameworks & Libraries</h3>
         <ul>
-          <li>Node.js</li>
+          <li>React.js</li>
           <li>Express.js</li>
           <li>Flask</li>
           <li>Django</li>
@@ -198,10 +207,11 @@
         <h3>Core Concepts</h3>
         <ul>
           <li>Data Structures & Algorithms</li>
-          <li>Machine Learning</li>
-          <li>Deep Learning</li>
           <li>OOP Concepts</li>
           <li>Operating Systems</li>
+          <li>Database Management</li>
+          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
         </ul>
       </article>
 
@@ -212,6 +222,18 @@
           <li>Problem Solving</li>
           <li>Adaptability</li>
           <li>Communication</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>AI Tools & Others</h3>
+        <ul>
+          <li>ChatGpt</li>
+          <li>Gemini</li>
+          <li>ClaudeAI</li>
+          <li>MS Office</li>
+          <li>VS Code</li>
+          <li>Canva</li>
         </ul>
       </article>
     </div>
@@ -318,16 +340,16 @@
       <h2>Certificates</h2>
       <div class="cert-container">
         <div class="cert-card">
-          <img src="cert1.jpeg" alt="Certificate 1" onclick="openPopup(this.src)">
-          <h3>AI Powered Shopping Ads Certified by Google</h3>
-        </div>
-        <div class="cert-card">
-          <img src="cert4.jpg" alt="Certificate 2" onclick="openPopup(this.src)">
+          <img src="cert4.jpg" alt="Certificate 1" onclick="openPopup(this.src)">
           <h3>Developing Back-end Apps With Node.js and Express.js by IBM</h3>
         </div>
         <div class="cert-card">
-          <img src="cert3.jpeg" alt="Certificate 3" onclick="openPopup(this.src)">
-          <h3>Gen AI Bedge by Google</h3>
+          <img src="cert1.jpeg" alt="Certificate 2" onclick="openPopup(this.src)">
+          <h3>AI Powered Shopping Ads Certified by Google</h3>
+        </div>
+        <div class="cert-card">
+          <img src="cert5.jpg" alt="Certificate 3" onclick="openPopup(this.src)">
+          <h3>Developing Front-end Apps with React by IBM</h3>
         </div>
       </div>
     </section>
@@ -362,6 +384,14 @@
       <img id="popup-img" src="" alt="Certificate preview" title="Certificate preview">
     </div>
 
+    <div id="resume-viewer" class="resume-viewer">
+      <div class="resume-viewer-content" role="dialog" aria-modal="true" aria-label="Resume Viewer">
+        <button type="button" id="close-resume-viewer" class="resume-close" aria-label="Close resume viewer">&times;</button>
+        <iframe src="Kunal-CV.pdf" title="Resume Preview"></iframe>
+        <a href="Kunal-CV.pdf" download class="resume-download-inside">Download</a>
+      </div>
+    </div>
+
     <footer>
       <p>&copy; 2025 DevMachine synaptrix. All rights reserved.</p>
     </footer>
@@ -371,4 +401,3 @@
 </html>
   
   
-
