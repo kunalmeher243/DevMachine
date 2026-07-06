@@ -143,8 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const texts = [
             "Coder.",
             "MERN Stack Developer.",
-            "Node.js Developer.",
-            "Tech Enthusiast."
+            "DevOps Engineer."
         ];
 
         let count = 0;
