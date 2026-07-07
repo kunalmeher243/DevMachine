@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal-Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="loader-center">
+        <div class="loader-circle">
+          <div class="loader-line">
+            <div class="loader-text">0%</div>
+          </div>
+        </div>
+        <div class="loader-label">Loading</div>
+      </div>
+
+      <div class="loader-top"></div>
+      <div class="loader-bottom"></div>
+    </div>
+
+    <audio id="loaderSound" src="loader.mp3" preload="auto"></audio>
+
+    <nav class="navbar">
+      <a href="#home" class="logo">DevMachine — Synaptrix</a>
+
+      <div class="hamburger"> 
+        <i class="fa fa-bars"></i>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul> 
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="animated-name">
+          <span class="letter">Mr. Kunal Meher</span>
+        </h1>
+
+        <div class="animated-text">
+          <h2>
+            <span class="static-text">I'm a </span>
+            <span id="typing-text"></span>
+            <span class="cursor">|</span>
+          </h2>
+        </div>
+
+        <p>
+          Computer Science student with strong skills in DSA, Full-Stack Development, 
+          and debugging, passionate about building smart and scalable AI applications.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="cta-button">Let's Connect</a>
+          <a href="#" class="resume-btn" id="open-resume-viewer">Download Resume</a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="profile.png" alt="Profile" class="Profile-img">
+      </div>
+    </section>
+
+  <section id="skills" class="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="devicon-mongodb-plain"></i>
+      <span>MongoDB</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-express-original"></i>
+      <span>Express</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-react-original"></i>
+      <span>React</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-nodejs-plain"></i>
+      <span>Node.js</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-html5-plain"></i>
+      <span>HTML</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-css3-plain"></i>
+      <span>CSS</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-javascript-plain"></i>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-cplusplus-plain"></i>
+      <span>C++</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-python-plain"></i>
+      <span>Python</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-java-plain"></i>
+      <span>Java</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-mysql-plain"></i>
+      <span>MySQL</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-git-plain"></i>
+      <span>Git</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-github-original"></i>
+      <span>GitHub</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-django-plain"></i>
+      <span>Django</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-flask-original"></i>
+      <span>Flask</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-docker-plain"></i>
+      <span>Docker</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-aws-plain"></i>
+      <span>AWS</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-linux-plain"></i>
+      <span>Linux</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-gitlab-original"></i>
+      <span>GitLab</span>
+    </div>
+  </div>
+</section>
+
+  <section id="skills-summary" class="skills-summary">
+    <h2 class="section-title">Skills Overview</h2>
+
+    <div class="skills-summary-grid">
+      <article class="skills-summary-card">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>C++</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>Web Technologies</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>Databases & Version Control</h3>
+        <ul>
+          <li>SQL</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>Git</li>
+          <li>GitHub</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>Frameworks & Libraries</h3>
+        <ul>
+          <li>React.js</li>
+          <li>Express.js</li>
+          <li>Flask</li>
+          <li>Django</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>Core Concepts</h3>
+        <ul>
+          <li>Data Structures & Algorithms</li>
+          <li>OOP Concepts</li>
+          <li>Operating Systems</li>
+          <li>Database Management</li>
+          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Teamwork</li>
+          <li>Problem Solving</li>
+          <li>Adaptability</li>
+          <li>Communication</li>
+        </ul>
+      </article>
+
+      <article class="skills-summary-card">
+        <h3>AI Tools & Others</h3>
+        <ul>
+          <li>ChatGpt</li>
+          <li>Gemini</li>
+          <li>ClaudeAI</li>
+          <li>MS Office</li>
+          <li>VS Code</li>
+          <li>Canva</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <i class="fa-solid fa-chart-area"></i>
+          <h3>Air Quality Monitering Web App</h3>
+          <p>A full-stack web application for air quality monitoring with real-time sensor data, interactive dashboard, cloud database, alert system, and health-friendly environment insights.</p>
+        </div>
+        <div class="project-card">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h3>Event Aggregator for College Students</h3>
+          <p>A web platform for college students to discover events and conveniently book nearby accommodations. It simplifies event participation while enhancing accessibility and overall student experience.</p>
+        </div>
+        <div class="project-card">
+          <i class="fa-regular fa-file-image"></i>
+          <h3>AI Powered Resume Builder For Blue-Collar Professionals</h3>
+          <p>An OpenAI APIs and Backend-powered model designed to assist blue-collar professionals in creating effective resumes by analyzing job descriptions and suggesting relevant skills and experiences with voice inputs.</p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="timeline-section" id="experience">
+
+  <h2 class="section-title">Professional Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-date">Nov 2025 – Feb 2026</span>
+      <div class="timeline-content">
+        <h3>Full Stack Developer Intern</h3>
+        <h4>Cognifyz Technologies</h4>
+        <ul>
+          <li>Optimized applications for 300+ users.</li>
+          <li>Built 5+ RESTful APIs.</li>
+          <li>Improved performance by 20%.</li>
+          <li>Worked in 5-member Agile team.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">Oct 2025 – Nov 2025</span>
+      <div class="timeline-content">
+        <h3>Participant</h3>
+        <h4>BPUT Hackathon</h4>
+        <ul>
+          <li>Built AI resume builder using React + Vite.</li>
+          <li>Generated resumes under 5 minutes.</li>
+          <li>Worked on APIs and authentication.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="timeline-section" id="education">
+
+  <h2 class="section-title">Education</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-date">2024 – 2028</span>
+      <div class="timeline-content">
+        <h3>B.Tech (CSE)</h3>
+        <h4>Trident Academy of Technology</h4>
+        <p>Bhubaneswar, Odisha</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">2022 – 2024</span>
+      <div class="timeline-content">
+        <h3>12th BSE</h3>
+        <h4>Krishna’s Vikash HSS</h4>
+        <p>Bargarh, Odisha</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">2021 – 2022</span>
+      <div class="timeline-content">
+        <h3>10th CHSE</h3>
+        <h4>Ganapati Adarsha Shikshya Niketan</h4>
+        <p>Birmaharajpur, Odisha</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="cert-container">
+        <div class="cert-card">
+          <img src="cert4.jpg" alt="Certificate 1" onclick="openPopup(this.src)">
+          <h3>Developing Back-end Apps With Node.js and Express.js by IBM</h3>
+        </div>
+        <div class="cert-card">
+          <img src="cert1.jpeg" alt="Certificate 2" onclick="openPopup(this.src)">
+          <h3>AI Powered Shopping Ads Certified by Google</h3>
+        </div>
+        <div class="cert-card">
+          <img src="cert5.jpg" alt="Certificate 3" onclick="openPopup(this.src)">
+          <h3>Developing Front-end Apps with React by IBM</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="contact-right">
+          <p><i class="fa-solid fa-phone"></i> +91 8249410332</p>
+          <p><i class="fa-solid fa-envelope"></i> kunalmeher243@gmail.com</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/kunalmeher27" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Kunalmeher243" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://instagram.com/_chillkunal" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+
+    <div id="popup" class="popup" onclick="closePopup()">
+      <img id="popup-img" src="" alt="Certificate preview" title="Certificate preview">
+    </div>
+
+    <div id="resume-viewer" class="resume-viewer">
+      <div class="resume-viewer-content" role="dialog" aria-modal="true" aria-label="Resume Viewer">
+        <button type="button" id="close-resume-viewer" class="resume-close" aria-label="Close resume viewer">&times;</button>
+        <iframe src="Kunal_Meher_Resume.pdf" title="Resume Preview"></iframe>
+        <a href="Kunal_Meher_Resume.pdf" download class="resume-download-inside">Download</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 DevMachine synaptrix. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+  
+  
